@@ -36,39 +36,6 @@ RUN set -eux; \
 		ca-certificates \
 		curl \
 		xz-utils \
-		\
-		apt-utils \
-		git \
-		libicu-dev \
-		g++ \
-		libpng-dev \
-		libxml2-dev \
-		libzip-dev \
-		libonig-dev \
-		libxslt-dev \
-		unzip \
-		libpq-dev \
-		nodejs \
-		npm \
-		wget \
-		apt-transport-https \
-		lsb-release \
-		ca-certificates \
-		libfreetype-dev \
-		libjpeg-dev \
-		optipng \
-		jpegoptim \
-		pngquant \
-		gifsicle \
-		tcpdump \
-		inetutils-ping \
-		iproute2 \
-		psmisc \
-		vim \
-		procps \
-		libmagickwand-dev \
-		imagemagick \
-		\
 	; \
 	rm -rf /var/lib/apt/lists/*
 
@@ -145,9 +112,6 @@ RUN set -eux; \
 		libssl-dev \
 		libxml2-dev \
 		zlib1g-dev \
-		build-essential wget libfreetype6-dev libjpeg-dev libpng-dev libzip-dev libpq-dev libxml2-dev libicu-dev libbz2-dev libssl-dev libcurl4-openssl-dev libxslt-dev libsqlite3-dev \
-                libmagickwand-dev \
-                imagemagick \
 	; \
 	\
 	export \
@@ -167,30 +131,7 @@ RUN set -eux; \
 		--build="$gnuArch" \
 		--with-config-file-path="$PHP_INI_DIR" \
 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" \
-		\
 		--enable-fd-setsize="$FD_SETSIZE" \
-		--with-freetype \
-		--with-jpeg \
-		--with-pdo-mysql \
-		--with-pdo-pgsql \
-		--with-opcache \
-		--with-intl \
-		--with-zip \
-		--with-calendar \
-		--with-dom \
-		--with-mbstring \
-		--with-xsl \
-		--with-sockets \
-		--with-bz2 \
-		--with-soap \
-		--with-bcmath \
-		--with-imagick \
-		--with-apcu \
-		--with-xdebug \
-		--with-sqlite3 \
-		--with-openssl \
-		--with-curl \
-		\
 		\
 # make sure invalid --configure-flags are fatal errors instead of just warnings
 		--enable-option-checking=fatal \
