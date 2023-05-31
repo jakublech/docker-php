@@ -36,7 +36,7 @@ RUN set -eux; \
 		ca-certificates \
 		curl \
 		xz-utils \
-		
+		\
 		apt-utils \
 		git \
 		libicu-dev \
@@ -68,7 +68,7 @@ RUN set -eux; \
 		procps \
 		libmagickwand-dev \
 		imagemagick \
-		
+		\
 	; \
 	rm -rf /var/lib/apt/lists/*
 
