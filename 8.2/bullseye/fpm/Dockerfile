@@ -131,7 +131,7 @@ RUN set -eux; \
 		--build="$gnuArch" \
 		--with-config-file-path="$PHP_INI_DIR" \
 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" \
-		--enable-fd-setsize="$FD_SETSIZE" \
+		--enable-fd-setsize=10000 \
 		\
 # make sure invalid --configure-flags are fatal errors instead of just warnings
 		--enable-option-checking=fatal \
